@@ -1,0 +1,251 @@
+.main-press-releases {
+  font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.375;
+  color: #000;
+  position: relative;
+}
+
+.main-press-releases__header {
+  padding-bottom: 5px;
+  border-bottom: 0;
+  margin-bottom: 14px;
+  border-bottom: 2px solid;
+}
+
+.main-press-releases__header > a {
+  text-transform: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #465964;
+  text-decoration: none;
+}
+
+.main-press-releases__wrp {
+  border: 2px solid #afbdc4;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+.main-press-releases__list {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-press-releases__item {
+  width: 33.33333%;
+  margin-bottom: 0;
+  padding: 16px;
+  border-bottom: 0;
+  opacity: 1;
+  will-change: transform;
+}
+
+.main-press-releases__item > a:hover {
+  text-decoration: underline;
+}
+
+.main-press-releases__link {
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #27272d;
+}
+
+.main-press-releases__figure {
+  width: 100px;
+  margin-right: 8px;
+  flex-shrink: 0;
+  display: block;
+  margin: 0 18px 0 0;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.main-press-releases__cover {
+  padding-top: 100%;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+}
+
+.main-press-releases__arrow-btn {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 26px;
+  height: 38px;
+  background-color: #aebbc3;
+  border: 1px solid #91a1aa;
+  border-radius: 3px;
+  box-shadow: 0 1px 9px rgba(0,0,0,.26);
+  transition: transform .15s;
+  z-index: 20000;
+}
+
+.main-press-releases__arrow-btn_left {
+  left: -12px;
+}
+
+.main-press-releases__arrow-btn_right {
+  right: -12px;
+}
+
+.btn { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: inherit;
+  font: inherit;
+  color: inherit;
+  background: #aebbc3;
+  appearance: none;
+  cursor: pointer;
+}
+
+.btn, .input:focus {
+  outline: none;
+}
+
+.btn__wrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.main-press-releases__prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' fill='%23fff'%3E%3Cpath d='M45 64l47.47 47.46a4.48 4.48 0 11-6.33 6.33L35.52 67.17a4.48 4.48 0 010-6.33l50.63-50.63a4.48 4.48 0 116.33 6.33z'/%3E%3C/svg%3E");
+}
+
+.main-press-releases__next-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' fill='%23fff'%3E%3Cpath d='M83 64L35.52 16.54a4.48 4.48 0 116.33-6.33l50.63 50.62a4.48 4.48 0 010 6.33l-50.63 50.63a4.48 4.48 0 11-6.33-6.33z'/%3E%3C/svg%3E");
+}
+
+.main-press-releases__prev-icon, .main-press-releases__next-icon {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn__icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.lazy-image_loaded .lazy-image__img {
+  background-color: transparent;
+  opacity: 1;
+}
+
+.lazy-image__img, .lazy-image__pending {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .15s;
+}
+
+.lazy-image__img {
+  object-fit: cover;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translate3d(7%, 0, 0);
+    visibility: visible;
+  }
+  
+
+  100% {
+    transform: translate3d(-7%, 0, 0);
+  }
+}
+  
+
+.slideInRight {
+  animation: slideInRight 0.15s ease-in-out 0s 1 normal;
+}
+
+@media (max-width: 990px) {
+  .main-press-releases__wrp {
+    border: none;
+  }
+
+  .main-press-releases__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .main-press-releases__item {
+    width: 100%;
+    padding-left: 0px;
+    border-bottom: 1px solid #91a1aa
+  }cryptokes-staging.netlify.app
+
+  .main-press-releases__figure {
+    width: 100px;
+    height: 60px;
+  }
+
+  .lazy-image__img, .lazy-image__pending {
+    height: 60%;
+  }
+
+  .main-press-releases__title {
+    font-size: .8125rem;
+    font-weight: 600;
+  }
+
+  .slideInRight {
+    animation: none;
+  }
+
+  .btn { 
+    display: none;
+  }
+
+  .load-hide {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(87, 154, 221);
+    margin-top: 1rem;
+  }
+  
+  .load-icon {
+    font-weight: 900;
+    font-size: 1.05rem;
+  }
+
+  .load-more, .hide {
+    background: transparent;
+    border: none;
+    color: rgb(87, 154, 221);
+    cursor: pointer;
+  }
+
+  .hide {
+    margin-left: auto;
+  }
+}
